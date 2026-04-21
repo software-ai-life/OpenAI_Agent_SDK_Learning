@@ -1,0 +1,10 @@
+
+    digraph G {
+        graph [splines=true];
+        node [fontname="Arial"];
+        edge [penwidth=1.5];
+    "__start__" [label="__start__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"__end__" [label="__end__", shape=ellipse, style=filled, fillcolor=lightblue, width=0.5, height=0.3];"WeatherAgent" [label="WeatherAgent", shape=box, style=filled, fillcolor=lightyellow, width=1.5, height=0.8];"get_weather" [label="get_weather", shape=ellipse, style=filled, fillcolor=lightgreen, width=0.5, height=0.3];"calculate_distance" [label="calculate_distance", shape=ellipse, style=filled, fillcolor=lightgreen, width=0.5, height=0.3];"__start__" -> "WeatherAgent";
+        "WeatherAgent" -> "get_weather" [style=dotted, penwidth=1.5];
+        "get_weather" -> "WeatherAgent" [style=dotted, penwidth=1.5];
+        "WeatherAgent" -> "calculate_distance" [style=dotted, penwidth=1.5];
+        "calculate_distance" -> "WeatherAgent" [style=dotted, penwidth=1.5];"WeatherAgent" -> "__end__";}
